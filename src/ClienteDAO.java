@@ -28,7 +28,7 @@ public class ClienteDAO {
            PreparedStatement stmt = this.conn.prepareStatement(sq1);
            stmt.setString(1,cliente.getCpf());
            stmt.setString(2,cliente.getNome());
-           stmt.setString(2,cliente.getEmail());
+           stmt.setString(3,cliente.getEmail());
            stmt.execute();
            
        }catch(SQLException ex){

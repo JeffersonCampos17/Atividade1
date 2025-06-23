@@ -28,7 +28,7 @@ public class FornecedorDAO {
            PreparedStatement stmt = this.conn.prepareStatement(sq1);
            stmt.setString(1,fornecedor.getCnpj());
            stmt.setString(2,fornecedor.getNome());
-           stmt.setString(2,fornecedor.getNomeFantasia());
+           stmt.setString(3,fornecedor.getNomeFantasia());
            stmt.execute();
            
        }catch(SQLException ex){

@@ -13,7 +13,7 @@ public class Produto {
     private int pk;
     private String nome;
     private double preco;
-    private String categoria;
+    private int categoria;
     private String codBarra;
 
     /**
@@ -47,14 +47,14 @@ public class Produto {
     /**
      * @return the categoria
      */
-    public String getCategoria() {
+    public int getCategoria() {
         return categoria;
     }
 
     /**
      * @param categoria the categoria to set
      */
-    public void setCategoria(String categoria) {
+    public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
 

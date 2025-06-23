@@ -47,6 +47,9 @@ public class Categoria {
     public void setPk(int pk){
         this.pk = pk;
     }
+    public String toString(){
+        return this.nome;
+    }
 
     
     

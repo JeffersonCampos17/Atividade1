@@ -23,12 +23,12 @@ public class ProdutoDAO {
         this.conn = this.conexao.getConexao();
     }
     public void inserir(Produto produto){
-       String sq1 = "INSERT INTO produto (pro_nome,pro_preco,pro_categoria,pro_codBarras) VALUES (?,?,?,?)";
+       String sq1 = "INSERT INTO produto (pro_nome,pro_preco,Categoria_cat_codigo,pro_codBarras) VALUES (?,?,?,?)";
        try {
            PreparedStatement stmt = this.conn.prepareStatement(sq1);
            stmt.setString(1,produto.getNome());
            stmt.setDouble(2,produto.getPreco());
-           stmt.setString(3,produto.getCategoria());
+           stmt.setInt(3,produto.getCategoria());
            stmt.setString(4,produto.getCodBarra());
            stmt.execute();
            
@@ -47,7 +47,7 @@ public class ProdutoDAO {
             p.setPk(id);
             p.setNome(rs.getString("pro_nome"));
             p.setPreco(rs.getDouble("pro_preco"));
-            p.setCategoria(rs.getString("pro_categoria"));
+            p.setCategoria(rs.getInt("Categoria_cat_codigo"));
             p.setCodBarra(rs.getString("pro_codBarra"));
             
             return p;
@@ -59,7 +59,7 @@ public class ProdutoDAO {
     }
     public void editar(Produto   produto){
         try{
-            String sql = "UPDATE produto set pro_nome=?,pro_preco=?,pro_categoria, pro_codBarra where id=?";
+            String sql = "UPDATE produto set pro_nome=?,pro_preco=?,pro_categoria, pro_codBarra where pro_codigo=?";
             
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, produto.getNome());
@@ -72,7 +72,7 @@ public class ProdutoDAO {
     }
     public void excluir(int id){
         try {
-            String sql= "delete from produto where id=?";
+            String sql= "delete from produto where pro_codigo=?";
             
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setInt(1 , id);

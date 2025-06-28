@@ -22,23 +22,23 @@ public class CabecalhoNfDAO {
         this.conn = this.conexao.getConexao();
     }
     public void inserir(CabecalhoNf cabecalho){
-       String sq1 = "INSERT INTO produto (data,valorTotal,CabecalhoNfcol) VALUES (?,?,?)";/*,cli_cpf,for_cnpj,Nota_Itens_idNota_Itens*/
+       String sq1 = "INSERT INTO cabecalho_nf  (data,valor_total,descricao,cli_cpf) VALUES (?,?,?,?)";/*,cli_cpf,for_cnpj,Nota_Itens_idNota_Itens*/
        try {
            PreparedStatement stmt = this.conn.prepareStatement(sq1);
            stmt.setString(1,cabecalho.getData());
            stmt.setDouble(2,cabecalho.getValoTotal());
            stmt.setString(3,cabecalho.getDescrição());
-          // stmt.setInt(4,cabecalho.getIdCliente());
+           stmt.setString(4,cabecalho.getIdCliente());
          //  stmt.setInt(5,cabecalho.getIdEmpresa());
          //  stmt.setInt(6,cabecalho.getNota_Itens_idNota_Itens());
            stmt.execute();
            
        }catch(SQLException ex){
-           System.out.println("Erro ao inserir produto : "+ ex.getMessage());
+           System.out.println("Erro ao inserir nf : "+ ex.getMessage());
        }
     }
     public CabecalhoNf getIdCabecalhoNf(int id){
-        String sql1 = "SELECT * FROM CabecalhoNf WHERE idCabecalhoNf = ?";
+        String sql1 = "SELECT * FROM Cabecalho_nf WHERE idCabecalhoNf = ?";
         try{
             PreparedStatement stmt = conn.prepareStatement(sql1,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
             stmt.setInt(1,id);
@@ -48,8 +48,8 @@ public class CabecalhoNfDAO {
             rs.first();
             p.setIdCabecalhoNf(id);
             p.setData(rs.getString("data"));
-            p.setValoTotal(rs.getDouble("valorTotal"));
-            p.setDescrição(rs.getString("CabecalhoNfcol"));
+            p.setValoTotal(rs.getDouble("valor_total"));
+            p.setDescrição(rs.getString("descricao"));
                         
             return p;
         }catch (SQLException ex){
@@ -60,7 +60,7 @@ public class CabecalhoNfDAO {
     }
     public void editar(CabecalhoNf   cabecalho){
         try{
-            String sql = "UPDATE produto set data=?,valorTotal=?,CabecalhoNfcol=? where idCabecalhoNf=?";
+            String sql = "UPDATE produto set data=?,valor_total=?,descricao=? where idCabecalhoNf=?";
             
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, cabecalho.getData());

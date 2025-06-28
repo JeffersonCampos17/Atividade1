@@ -133,12 +133,12 @@ public class Jmenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        Jnfe nf = new Jnfe();
+        Jnfs nf = new Jnfs();
         nf.show();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        Jnfs nf = new Jnfs();
+        Jnfe1 nf = new Jnfe1();
         nf.show();// TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 

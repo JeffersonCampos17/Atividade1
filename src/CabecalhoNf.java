@@ -13,8 +13,8 @@ public class CabecalhoNf {
     private String data;
     private double valoTotal;
     private String descrição;
-    private int idCliente;
-    private int idEmpresa;
+    private String idCliente;
+    private String idEmpresa;
     private int Nota_Itens_idNota_Itens;
 
     public int getNota_Itens_idNota_Itens() {
@@ -33,19 +33,19 @@ public class CabecalhoNf {
         this.idCabecalhoNf = idCabecalhoNf;
     }
 
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 
-    public int getIdEmpresa() {
+    public String getIdEmpresa() {
         return idEmpresa;
     }
 
-    public void setIdEmpresa(int idEmpresa) {
+    public void setIdEmpresa(String idEmpresa) {
         this.idEmpresa = idEmpresa;
     }
 

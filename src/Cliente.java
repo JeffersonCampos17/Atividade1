@@ -54,4 +54,8 @@ public class Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+    
+      public String toString(){
+        return this.nome;
+    }
 }

@@ -2,20 +2,26 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group name="AulasJava">
-            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jcategoria.java</file>
-            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/ProdutoDAO.java</file>
-            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Categoria.java</file>
-            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/CategoriaDAO.java</file>
-            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jprodutos.java</file>
-            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jmenu.java</file>
-        </group>
         <group>
             <file>file:/C:/Users/donks/OneDrive/Área%20de%20Trabalho/Fatec/Java/Atividade1/src/ClienteDAO.java</file>
             <file>file:/C:/Users/donks/OneDrive/Área%20de%20Trabalho/Fatec/Java/Atividade1/src/CabecalhoNfDAO.java</file>
             <file>file:/C:/Users/donks/OneDrive/Área%20de%20Trabalho/Fatec/Java/Atividade1/src/CabecalhoNf.java</file>
             <file>file:/C:/Users/donks/OneDrive/Área%20de%20Trabalho/Fatec/Java/Atividade1/src/Jcategoria.java</file>
             <file>file:/C:/Users/donks/OneDrive/Área%20de%20Trabalho/Fatec/Java/Atividade1/src/Jnfe.java</file>
+        </group>
+        <group name="AulasJava">
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/ClienteDAO.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jcategoria.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/ProdutoDAO.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Categoria.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/FornecedorDAO.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jcliente.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/CategoriaDAO.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jprodutos.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jfornecedor.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Produto.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jmenu.java</file>
+            <file>file:/C:/Users/2830482321014/Documents/RepositorioAulaJAVA/AulasDeJava/Atividade1/src/Jnfe.java</file>
         </group>
     </open-files>
 </project-private>

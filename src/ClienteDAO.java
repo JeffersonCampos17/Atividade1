@@ -3,6 +3,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -35,6 +37,30 @@ public class ClienteDAO {
            System.out.println("Erro ao inserir cliente : "+ ex.getMessage());
        }
     }
+    
+    public List<Cliente> getNomeCliente(String nome) {
+    List<Cliente> lista = new ArrayList<>();
+    String sql = "SELECT * FROM cliente WHERE cli_nome LIKE ?";
+
+    try {
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, "%" + nome + "%");
+        ResultSet rs = stmt.executeQuery();
+
+        while (rs.next()) {
+            Cliente c = new Cliente();
+            c.setCpf(rs.getString("cli_cpf"));
+            c.setNome(rs.getString("cli_nome"));
+            c.setEmail(rs.getString("cli_email"));
+            lista.add(c);
+        }
+
+    } catch (SQLException ex) {
+        System.out.println("Erro ao buscar cliente: " + ex.getMessage());
+    }
+
+    return lista;
+}
     public Cliente getCliente (String id){
         String sql1 = "SELECT * FROM cliente WHERE cli_cpf = ?";
         try{

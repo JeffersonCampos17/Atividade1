@@ -43,12 +43,13 @@ public class ProdutoDAO {
             stmt.setInt(1,id);
             ResultSet rs = stmt.executeQuery();
             Produto p = new Produto();
+                       
             rs.first();
             p.setPk(id);
             p.setNome(rs.getString("pro_nome"));
             p.setPreco(rs.getDouble("pro_preco"));
             p.setCategoria(rs.getInt("Categoria_cat_codigo"));
-            p.setCodBarra(rs.getString("pro_codBarra"));
+            p.setCodBarra(rs.getString("pro_codBarras"));
             
             return p;
         }catch (SQLException ex){
@@ -59,12 +60,14 @@ public class ProdutoDAO {
     }
     public void editar(Produto   produto){
         try{
-            String sql = "UPDATE produto set pro_nome=?,pro_preco=?,pro_categoria, pro_codBarra where pro_codigo=?";
+            String sql = "UPDATE produto set pro_nome=?,pro_preco=?,pro_categoria=?, pro_codBarras=? where pro_codigo=?";
             
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, produto.getNome());
             stmt.setDouble(2, produto.getPreco());
-            stmt.setInt(3, produto.getPk());
+            stmt.setInt(3, produto.getCategoria());
+            stmt.setString(4, produto.getCodBarra());
+            stmt.setInt(5, produto.getPk());
             stmt.execute();
         }catch (SQLException ex){
             System.out.println("Erro ao atualizar produto: "+ex.getMessage());
